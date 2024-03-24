@@ -15,7 +15,7 @@ from models.review import Review
 from models.state import State
 
 class HBNBCommand(cmd.Cmd):   
-    """ Entry point of our console.
+    """ Entry point of our consol.
         Application.
     """
     prompt = '(hbnb) '
