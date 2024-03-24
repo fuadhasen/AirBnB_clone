@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
     """ Entry point of our consol.
         Application.
     """
-    prompt = '(hbnb) '
+    prompt = '(hbnb)'
     def do_quit(self, line):
         """ quite method """
         return True
