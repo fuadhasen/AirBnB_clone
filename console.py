@@ -29,17 +29,10 @@ class HBNBCommand(cmd.Cmd):
         """ EOF method """
         return True
 
-    def do_help(self, line):
+    def help_quit(self, line):
         """ help method """
-        if line == 'quit':
-            print("Quit command to exit the program")
-            print()
-        else:
-            print()
-            print("Documented commands (type help <topic>):")
-            print("========================================")
-            print("EOF  help  quit")
-            print()
+        print("Quit command to exit the program")
+        print()
 
     def emptyline(self):
         """ handle empty inputs """
@@ -198,5 +191,3 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ ==  '__main__':
     HBNBCommand().cmdloop()
-    if not sys.stdin.isatty():
-        print()
