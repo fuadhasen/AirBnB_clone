@@ -71,7 +71,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """ show command"""
-        cls_arr = ["BaseModel", "User", "Place"]
+        cls_arr = ["BaseModel", "User", "Place", "Amenity", "City", "State", "Review"]
         if not line:
             print("** class name missing **")
         else:
@@ -99,7 +99,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """ destroy command"""
-        cls_arr = ["BaseModel", "User", "Place"]
+        cls_arr = ["BaseModel", "User", "Place", "Amenity", "City", "State", "Review"]
         if not line:
             print("** class name missing **")
         else:
@@ -131,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """ all command"""
-        cls_arr = ["BaseModel", "User", "Place"]
+        cls_arr = ["BaseModel", "User", "Place", "Amenity", "City", "State", "Review"]
         if not line or line in cls_arr:
             dic = FileStorage._FileStorage__objects
             # print(dic)
@@ -147,7 +147,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """ update command"""
-        cls_arr = ["BaseModel", "User", "Place"]
+        cls_arr = ["BaseModel", "User", "Place", "Amenity", "City", "State", "Review"]
         if not line:
             print("** class name missing **")
         else:
