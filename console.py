@@ -14,9 +14,7 @@ from models.city import City
 from models.review import Review
 from models.state import State
 
-class HBNBCommand(cmd.Cmd):
-    
-    
+class HBNBCommand(cmd.Cmd):   
     """ Entry point of our console.
         Application.
     """
@@ -25,18 +23,15 @@ class HBNBCommand(cmd.Cmd):
         """ quite method """
         return True
 
-    def do_EOF(self, line):
-        """ EOF method """
-        return True
-
     def help_quit(self):
         """ help method """
         print("Quit command to exit the program")
         print()
 
-    def emptyline(self):
-        """ handle empty inputs """
-        pass
+    def do_EOF(self, line):
+        """ EOF method """
+        return True
+
 
     def do_create(self, line):
         """ create command """
@@ -189,5 +184,5 @@ class HBNBCommand(cmd.Cmd):
                     if flag == 0:
                         print("** no instance found **")
 
-if __name__ ==  '__main__':
+if __name__ ==  "__main__":
     HBNBCommand().cmdloop()
