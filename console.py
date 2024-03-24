@@ -14,11 +14,12 @@ from models.city import City
 from models.review import Review
 from models.state import State
 
-class HBNBCommand(cmd.Cmd):   
+
+class HBNBCommand(cmd.Cmd):
     """ Entry point of our consol.
         Application.
     """
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
     def do_quit(self, line):
         """ quite method """
         return True
@@ -31,7 +32,6 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, line):
         """ EOF method """
         return True
-
 
     def do_create(self, line):
         """ create command """
@@ -162,9 +162,7 @@ class HBNBCommand(cmd.Cmd):
                     print("** instance id missing **")
                 else:
                     wanted_key = "{}.{}".format(arr[0], arr[1])
-                    print(wanted_key)
                     dic = FileStorage._FileStorage__objects
-                    new_dic = {}
                     flag = 0
                     for k, v in dic.items():
                         if wanted_key == k:
@@ -186,3 +184,5 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ ==  "__main__":
     HBNBCommand().cmdloop()
+    if not sys.stdin.isatty():
+        print()
